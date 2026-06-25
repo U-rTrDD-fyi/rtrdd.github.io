@@ -20,10 +20,10 @@ set -euo pipefail
 SIGN_KEY="${SIGN_KEY:-}"
 
 # ---- repo identity / layout (edit these) ----------------------------------
-BASE_URL="https://rtrdd.github.io"
+BASE_URL="https://u-rtrdd-fyi.github.io"
 ORIGIN="rTrDD Repo"
 LABEL="rTrDD Repo"
-REPO_DESC="https://rtrdd.github.io/"
+REPO_DESC="https://u-rtrdd-fyi.github.io/"
 ARCHS="iphoneos-arm64"
 TINT="#58a6ff"
 

@@ -16,8 +16,8 @@ Description: CLI ipa decryption tool
  images (main executable, frameworks, and appex plug-ins) from an
  installed app and repackages them into a plaintext .ipa.
 Author: U-rTrDD-fyi <275768457+U-rTrDD-fyi@users.noreply.github.com>
-Depiction: https://rtrdd.github.io/depictions/dev.rtrdd.ipadecrypt-cli.html
-Icon: https://rtrdd.github.io/icons/ipadecrypt-cli.png
+Depiction: https://u-rtrdd-fyi.github.io/depictions/dev.rtrdd.ipadecrypt-cli.html
+Icon: https://u-rtrdd-fyi.github.io/icons/dev.rtrdd.ipadecrypt-cli.png
 Name: ipadecrypt-cli
-SileoDepiction: https://rtrdd.github.io/depictions/dev.rtrdd.ipadecrypt-cli.json
+SileoDepiction: https://u-rtrdd-fyi.github.io/depictions/dev.rtrdd.ipadecrypt-cli.json
 
