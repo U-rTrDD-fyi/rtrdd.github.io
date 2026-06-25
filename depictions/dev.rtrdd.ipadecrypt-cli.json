@@ -1,0 +1,64 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#58a6ff",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Description"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**ipadecrypt-cli** is an on-device IPA decryptor for jailbroken iOS. It dumps decrypted Mach-O images — the main executable, frameworks, and appex plug-ins — from an installed app and repackages them into a plaintext `.ipa`.\n\nShips two commands:\n\n- **ipadecrypt** — the core decryptor (`decrypt` / `version` subcommands).\n- **decrypt** — a convenience wrapper that resolves the installed `.app` from a bundle id, names the output IPA, and (with `--scan`) verifies every binary's cryptid via `otool`.\n\n**Usage**\n\n```\ndecrypt com.openai.chat /var/mobile/Documents/ipadecrypt\ndecrypt --scan com.openai.chat /var/mobile/Documents/ipadecrypt\n```"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Information"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "iphoneos-arm64"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Section",
+          "text": "Utilities"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "U-rTrDD-fyi"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/U-rTrDD-fyi",
+          "openExternal": "true"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**1.0.0**\n\n- Initial release.\n- `ipadecrypt` core decryptor (main executable, frameworks, appex plug-ins).\n- `decrypt` wrapper: bundle-id resolution, auto-named output, optional `--scan` cryptid verification."
+        }
+      ]
+    }
+  ]
+}

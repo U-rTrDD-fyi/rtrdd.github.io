@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rTrDD Repo</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-2: #3fb950;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    min-height: 100vh;
+  }
+  main { width: 100%; max-width: 620px; }
+  header { text-align: center; margin-bottom: 40px; }
+  h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    margin: 0 0 14px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .url-row { display: flex; gap: 8px; }
+  .url-box {
+    flex: 1;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  button.copy {
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 0 16px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  button.copy:hover { border-color: var(--accent); color: var(--accent); }
+
+  .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 460px) { .btns { grid-template-columns: 1fr; } }
+  a.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: border-color .15s, color .15s;
+  }
+  a.btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .pkg { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .pkg + .pkg { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px; }
+  .pkg-name { font-weight: 600; }
+  .pkg-name code { font-family: var(--mono); font-size: 0.95rem; }
+  .pkg-desc { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+  .pkg-ver {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 9px;
+    white-space: nowrap;
+  }
+  a.dl { color: var(--accent); text-decoration: none; font-size: 0.85rem; white-space: nowrap; }
+  a.dl:hover { text-decoration: underline; }
+
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 8px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>rTrDD Repo</h1>
+    <p class="tagline">On-device tools for jailbroken iOS</p>
+  </header>
+
+  <div class="card">
+    <h2>Add this repo</h2>
+    <div class="url-row">
+      <div class="url-box" id="repoUrl">https://rtrdd.github.io/</div>
+      <button class="copy" onclick="copyUrl()">Copy</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>One-tap (on device)</h2>
+    <div class="btns">
+      <a class="btn" href="sileo://source/https://rtrdd.github.io/">Sileo</a>
+      <a class="btn" href="zbra://sources/add/https://rtrdd.github.io/">Zebra</a>
+      <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://rtrdd.github.io/">Cydia</a>
+      <a class="btn" href="installer://add/https://rtrdd.github.io/">Installer</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Packages</h2>
+    <!-- PKGS:START -->
+    <div class="pkg">
+      <div>
+        <div class="pkg-name"><code>ipadecrypt-cli</code></div>
+        <div class="pkg-desc">CLI ipa decryption tool</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <a class="dl" href="debs/dev.rtrdd.ipadecrypt-cli_1.0.0_iphoneos-arm64.deb">.deb</a>
+        <span class="pkg-ver">1.0.0</span>
+      </div>
+    </div>
+    <!-- PKGS:END -->
+  </div>
+
+  <footer>
+    Maintained by <a href="https://github.com/U-rTrDD-fyi">U-rTrDD-fyi</a>
+  </footer>
+</main>
+
+<script>
+  function copyUrl() {
+    const url = document.getElementById('repoUrl').textContent.trim();
+    navigator.clipboard.writeText(url).then(() => {
+      const b = document.querySelector('button.copy');
+      const old = b.textContent;
+      b.textContent = 'Copied!';
+      setTimeout(() => b.textContent = old, 1200);
+    });
+  }
+</script>
+</body>
+</html>

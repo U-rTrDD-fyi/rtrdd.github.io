@@ -1,0 +1,10 @@
+.repoenv
+keyparams
+*secret*.asc
+*private*.asc
+secring.*
+**/*/.DS_Store
+.DS_Store
+**/.DS_Store
+*/.DS_Store
+.extra-override

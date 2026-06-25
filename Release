@@ -1,0 +1,20 @@
+Origin: rTrDD Repo
+Label: rTrDD Repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm64
+Components: main
+Description: https://rtrdd.github.io/
+MD5Sum:
+ a8303f6cc00f86333cedca65f95af52c 1052 Packages
+ 8589e0936bd196d880bebcc5a9e36e53 668 Packages.bz2
+ c7cf3d48520ecaa23c9b83993dc83961 592 Packages.gz
+ 163f4b29a572bb5ae870345bb6f84074 672 Packages.xz
+ 2104c7e9a698b2d1a443d19746c39824 591 Packages.zst
+SHA256:
+ 6132b630b8dfc0195a5f8f5fbcd82cb9499bb31abdb4d071bb0eb8c22e846b55 1052 Packages
+ 1f90aaae764015b2c52b12f7eaf752084f9a4fd0d55f85ef09e96e5024ba88a3 668 Packages.bz2
+ 3ff519858c9d450d6e7185a102e50d262f41aea480d5a73a67a379aba1bc1008 592 Packages.gz
+ 7e181d92231a5cc485d8b69eb658909959ff83b42639137f386e2069b711fcf9 672 Packages.xz
+ 19d348e87a12143103c7a445f68fe873781011c7df2ac1fe6ac85c28b90376cf 591 Packages.zst
